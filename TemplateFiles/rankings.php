@@ -1,5 +1,5 @@
 <?php
-$passlist = json_decode(file_get_contents("env.json"));
+$passlist = json_decode(file_get_contents("env.json"), true);
 require_once 'api.php';
 $api = new BrawlStarsAPI($passlist["BrawlStarsAPIKey"]);
 
